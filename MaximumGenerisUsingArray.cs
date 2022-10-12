@@ -32,5 +32,10 @@ namespace FindMaximumNumberProject
             var Max = MaxValue(value);
             return Max;
         }
+        public void PrintMaxValue()
+        {
+            var Max = MaxValue(this.value);
+            Console.WriteLine("Max value is: " + Max);
+        }
     }
 }

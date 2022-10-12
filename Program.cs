@@ -44,15 +44,15 @@
 
             int[] intarray = { 41, 23, 63, 45, 76 };
             MaximumGenericsUsingArray<int> generic = new MaximumGenericsUsingArray<int>(intarray);
-            Console.WriteLine("The maximum No is " + generic.MaxMethod());
+            generic.PrintMaxValue();
 
             double[] doublearray = { 23.7, 36.8, 83.3, 15.5, 96.9 };
             MaximumGenericsUsingArray<double> genericDouble = new MaximumGenericsUsingArray<double>(doublearray);
-            Console.WriteLine("The maximum No is " + genericDouble.MaxMethod());
+            genericDouble.PrintMaxValue();
 
-            string[] stringarray = { "237", "368", "833", "155", "969" };
+            string[] stringarray = { "Apple", "Peach", "Banana", "Orange" };
             MaximumGenericsUsingArray<string> genericString = new MaximumGenericsUsingArray<string>(stringarray);
-            Console.WriteLine("The maximum No is " + genericString.MaxMethod());
+            genericString.PrintMaxValue();
         }
     }
 }
