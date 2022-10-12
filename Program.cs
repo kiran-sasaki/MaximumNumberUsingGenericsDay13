@@ -33,26 +33,26 @@
             //string StringTestCase3 = MaximumNumberCheck.MaximumString("25", "75", "90");
             //Console.WriteLine("Maximum Number is " + StringTestCase3);
 
-            GenericMaximum<int> maximum = new GenericMaximum<int>(45, 67, 57);
-            Console.WriteLine("The maximum No is "+maximum.TestMaximum());
-            GenericMaximum<double> doublemaximum = new GenericMaximum<double>(45.5, 76.9, 25.7);
-            Console.WriteLine("The maximum No is " + doublemaximum.TestMaximum());
-            GenericMaximum<string> stringmaximum = new GenericMaximum<string>("Apple", "Peach", "Banana");
-            Console.WriteLine("The maximum No is " + stringmaximum.TestMaximum());
+            //GenericMaximum<int> maximum = new GenericMaximum<int>(45, 67, 57);
+            //Console.WriteLine("The maximum No is "+maximum.TestMaximum());
+            //GenericMaximum<double> doublemaximum = new GenericMaximum<double>(45.5, 76.9, 25.7);
+            //Console.WriteLine("The maximum No is " + doublemaximum.TestMaximum());
+            //GenericMaximum<string> stringmaximum = new GenericMaximum<string>("Apple", "Peach", "Banana");
+            //Console.WriteLine("The maximum No is " + stringmaximum.TestMaximum());
 
 
 
-            //int[] intarray = { 41, 23, 63, 45,76 };
-            //GenericMaximum<int> generic = new GenericMaximum<int>(intarray);
-            //generic.PrintMaxValue();
+            int[] intarray = { 41, 23, 63, 45, 76 };
+            MaximumGenericsUsingArray<int> generic = new MaximumGenericsUsingArray<int>(intarray);
+            Console.WriteLine("The maximum No is " + generic.MaxMethod());
 
-            //double[] doublearray = { 23.7, 36.8, 83.3, 15.5, 96.9 };
-            //GenericMaximum<double> genericDouble = new GenericMaximum<double>(doublearray);
-            //genericDouble.PrintMaxValue();
+            double[] doublearray = { 23.7, 36.8, 83.3, 15.5, 96.9 };
+            MaximumGenericsUsingArray<double> genericDouble = new MaximumGenericsUsingArray<double>(doublearray);
+            Console.WriteLine("The maximum No is " + genericDouble.MaxMethod());
 
-            //string[] stringarray = { "237", "368", "833", "155", "969" };
-            //GenericMaximum<string> genericString = new GenericMaximum<string>(stringarray);
-            //genericString.PrintMaxValue();
+            string[] stringarray = { "237", "368", "833", "155", "969" };
+            MaximumGenericsUsingArray<string> genericString = new MaximumGenericsUsingArray<string>(stringarray);
+            Console.WriteLine("The maximum No is " + genericString.MaxMethod());
         }
     }
 }
