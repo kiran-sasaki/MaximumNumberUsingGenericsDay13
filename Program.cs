@@ -34,11 +34,11 @@
             //Console.WriteLine("Maximum Number is " + StringTestCase3);
 
             GenericMaximum<int> maximum = new GenericMaximum<int>(45, 67, 57);
-            Console.WriteLine("The maximum No is "+maximum.MaxValue());
+            Console.WriteLine("The maximum No is "+maximum.TestMaximum());
             GenericMaximum<double> doublemaximum = new GenericMaximum<double>(45.5, 76.9, 25.7);
-            Console.WriteLine("The maximum No is " + doublemaximum.MaxValue());
-            GenericMaximum<string> stringmaximum = new GenericMaximum<string>("Apple","Peach","Banana");
-            Console.WriteLine("The maximum No is " + stringmaximum.MaxValue());
+            Console.WriteLine("The maximum No is " + doublemaximum.TestMaximum());
+            GenericMaximum<string> stringmaximum = new GenericMaximum<string>("Apple", "Peach", "Banana");
+            Console.WriteLine("The maximum No is " + stringmaximum.TestMaximum());
 
 
 
