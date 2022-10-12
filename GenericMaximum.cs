@@ -8,34 +8,39 @@ namespace FindMaximumNumberProject
 {
     public class GenericMaximum<T> where T : IComparable
     {
-        private T firstValue, SecondValue, ThirdValue;
-        public GenericMaximum(T firstValue, T SecondValue, T Thirdvalue)
+        public T FirstValue, SecondValue, ThirdValue;
+        public GenericMaximum(T FirstValue, T SecondValue, T Thirdvalue)
         {
-            this.firstValue = firstValue;
+            this.FirstValue = FirstValue;
             this.SecondValue = SecondValue;
             this.ThirdValue = Thirdvalue;
         }
-        public T MaxValue()
+        public static T MaxValue(T FirstValue,T SecondValue,T ThirdValue)
         {
-            if (firstValue.CompareTo(SecondValue) > 0 && firstValue.CompareTo(ThirdValue) > 0 ||
-                firstValue.CompareTo(SecondValue) >= 0 && firstValue.CompareTo(ThirdValue) > 0 ||
-                firstValue.CompareTo(SecondValue) > 0 && firstValue.CompareTo(ThirdValue) >= 0)
+            if (FirstValue.CompareTo(SecondValue) > 0 && FirstValue.CompareTo(ThirdValue) > 0 ||
+                FirstValue.CompareTo(SecondValue) >= 0 && FirstValue.CompareTo(ThirdValue) > 0 ||
+                FirstValue.CompareTo(SecondValue) > 0 && FirstValue.CompareTo(ThirdValue) >= 0)
             {
-                return firstValue;
+                return FirstValue;
             }
-            if (SecondValue.CompareTo(firstValue) > 0 && SecondValue.CompareTo(ThirdValue) > 0 ||
-                SecondValue.CompareTo(firstValue) >= 0 && SecondValue.CompareTo(ThirdValue) > 0 ||
-                SecondValue.CompareTo(firstValue) > 0 && SecondValue.CompareTo(ThirdValue) >= 0)
+            if (SecondValue.CompareTo(FirstValue) > 0 && SecondValue.CompareTo(ThirdValue) > 0 ||
+                SecondValue.CompareTo(FirstValue) >= 0 && SecondValue.CompareTo(ThirdValue) > 0 ||
+                SecondValue.CompareTo(FirstValue) > 0 && SecondValue.CompareTo(ThirdValue) >= 0)
             {
                 return SecondValue;
             }
-            if (ThirdValue.CompareTo(SecondValue) > 0 && ThirdValue.CompareTo(firstValue) > 0 ||
-              ThirdValue.CompareTo(SecondValue) >= 0 && ThirdValue.CompareTo(firstValue) > 0 ||
-             ThirdValue.CompareTo(SecondValue) > 0 && ThirdValue.CompareTo(firstValue) >= 0)
+            if (ThirdValue.CompareTo(SecondValue) > 0 && ThirdValue.CompareTo(FirstValue) > 0 ||
+              ThirdValue.CompareTo(SecondValue) >= 0 && ThirdValue.CompareTo(FirstValue) > 0 ||
+             ThirdValue.CompareTo(SecondValue) > 0 && ThirdValue.CompareTo(FirstValue) >= 0)
             {
                 return ThirdValue;
             }
-            return firstValue;
+            return FirstValue;
+        }
+        public T TestMaximum()
+        {
+            T max = GenericMaximum<T>.MaxValue(this.FirstValue, this.SecondValue, this.ThirdValue);
+            return max;
         }
     }
 }
